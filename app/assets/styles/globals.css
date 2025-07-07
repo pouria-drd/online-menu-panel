@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+    --font-peyda: var(--font-peyda);
+    --font-iran-yekan-x: var(--font-iran-yekan-x);
+}
+
+body {
+    font-family: var(--font-iran-yekan-x), Arial, Helvetica, sans-serif;
+    @apply bg-white;
+}
+
+.r2l {
+    direction: rtl;
+}
+
+.l2r {
+    direction: ltr;
+}
+
+.ss02 {
+    font-feature-settings: "ss02";
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+}
+
+/* ---------------------------------------------------------------------- */
+/* Scroll area */
+
+::-webkit-scrollbar {
+    @apply w-2 h-2 bg-zinc-200;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    @apply bg-zinc-300;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    @apply bg-zinc-300;
+}
+
+* {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Utilities area */
+
+@layer utilities {
+    .glass-effect {
+        backdrop-filter: blur(20px) saturate(150%);
+        -webkit-backdrop-filter: blur(20px) saturate(150%);
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Components area */
+
+@layer components {
+}
