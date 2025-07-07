@@ -9,8 +9,8 @@
 }
 
 body {
-    font-family: var(--font-iran-yekan-x), Arial, Helvetica, sans-serif;
-    @apply bg-white;
+    font-family: var(--font-sans), var(--font-iran-yekan-x), Arial, Helvetica,
+        sans-serif;
 }
 
 .r2l {
@@ -55,12 +55,6 @@ body {
         backdrop-filter: blur(20px) saturate(150%);
         -webkit-backdrop-filter: blur(20px) saturate(150%);
     }
-}
-
-/* ---------------------------------------------------------------------- */
-/* Components area */
-
-@layer components {
 }
 
 @theme inline {
@@ -171,10 +165,10 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
 }

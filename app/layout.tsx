@@ -2,6 +2,7 @@ import "./assets/styles/globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/providers";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -94,11 +95,14 @@ interface RootLayoutProps {
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
-        <html lang="fa-IR">
+        <html lang="en" suppressHydrationWarning>
             <body
                 className={`${peyda.variable} ${iranYekanX.variable} ss02
-                ${geistSans.variable} ${geistMono.variable} antialiased`}>
-                {children}
+                        ${geistSans.variable} ${geistMono.variable} 
+                        bg-white dark:bg-zinc-900  antialiased`}>
+                <ThemeProvider attribute="class" defaultTheme="system">
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
