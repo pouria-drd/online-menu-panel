@@ -1,6 +1,12 @@
-import { Button, ThemeToggle } from "@/components/ui";
+"use client";
+
+import { Button } from "@/components/ui";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher, ThemeToggle } from "@/components/shared/settings";
 
 function RootPage() {
+    const t = useTranslations("RootPage");
+
     return (
         <div
             className="min-h-dvh flex items-center justify-center 
@@ -14,17 +20,18 @@ function RootPage() {
                     sunt molestiae culpa reprehenderit veniam in sapiente.
                 </p>
 
-                <div>
+                <div className="space-x-2">
                     <Button>Button 1</Button>
                     <Button variant="secondary">Button 2</Button>
                 </div>
 
                 <ThemeToggle />
-            </div>
+                <div>
+                    <p>Lang</p>
+                    <p className="font-iran-yekan-x">{t("title")}</p>
+                </div>
 
-            <div className="text-red-500 dark:text-green-400">
-                <p>theme</p>
-                <p className="font-iran-yekan-x">سلام</p>
+                <LanguageSwitcher />
             </div>
         </div>
     );

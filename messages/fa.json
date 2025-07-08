@@ -1,0 +1,12 @@
+{
+    "RootPage": {
+        "title": "سلام دنیا!",
+        "about": "برو به صفحه درباره بازی"
+    },
+
+    "Components": {
+        "LanguageSwitcher": {
+            "title": "تغییر زبان"
+        }
+    }
+}

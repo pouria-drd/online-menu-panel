@@ -4,6 +4,9 @@ import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers";
 
+import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -87,22 +90,43 @@ export const metadata: Metadata = {
         template: "%s | OMP",
     },
     description: "An online menu for your favorite restaurants",
+
+    creator: "Pouria Darandi",
+    publisher: "Pouria Darandi",
+    authors: [
+        {
+            name: "Pouria Darandi",
+            url: "https://pouria-drd.ir/",
+        },
+    ],
+    appleWebApp: true,
+    applicationName: "OMP",
+
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 interface RootLayoutProps {
     children: React.ReactNode;
 }
 
-function RootLayout({ children }: Readonly<RootLayoutProps>) {
+async function RootLayout({ children }: Readonly<RootLayoutProps>) {
+    const locale = await getLocale();
+    const dir = locale === "fa" ? "rtl" : "ltr";
+
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang={locale} suppressHydrationWarning dir={dir}>
             <body
                 className={`${peyda.variable} ${iranYekanX.variable} ss02
                         ${geistSans.variable} ${geistMono.variable} 
                         bg-white dark:bg-zinc-900  antialiased`}>
-                <ThemeProvider attribute="class" defaultTheme="system">
-                    {children}
-                </ThemeProvider>
+                <NextIntlClientProvider locale={locale}>
+                    <ThemeProvider attribute="class" defaultTheme="system">
+                        {children}
+                    </ThemeProvider>
+                </NextIntlClientProvider>
             </body>
         </html>
     );
