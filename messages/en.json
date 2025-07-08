@@ -7,6 +7,10 @@
     "Components": {
         "LanguageSwitcher": {
             "title": "Change Language"
+        },
+
+        "ThemeSwitch": {
+            "text": "Dark Mode"
         }
     }
 }

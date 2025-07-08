@@ -43,9 +43,11 @@ const LanguageSwitcher = () => {
                     {LANGUAGES.find((l) => l.code === selectedLocale)?.label}
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent
-                className={`${currentLocale === "fa" ? "r2l" : "l2r"} w-44`}>
-                <DropdownMenuLabel>{t("title")}</DropdownMenuLabel>
+            {/* <DropdownMenuContent className={`${currentLocale === "fa" ? "r2l" : "l2r"} w-44`}> */}
+            <DropdownMenuContent className="w-44">
+                <DropdownMenuLabel className="text-center">
+                    {t("title")}
+                </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuRadioGroup
                     value={selectedLocale}

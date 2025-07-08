@@ -2,7 +2,11 @@
 
 import { Button } from "@/components/ui";
 import { useTranslations } from "next-intl";
-import { LanguageSwitcher, ThemeToggle } from "@/components/shared/settings";
+import {
+    LanguageSwitcher,
+    ThemeSwitch,
+    ThemeToggle,
+} from "@/components/shared/settings";
 
 function RootPage() {
     const t = useTranslations("RootPage");
@@ -26,6 +30,9 @@ function RootPage() {
                 </div>
 
                 <ThemeToggle />
+
+                <ThemeSwitch />
+
                 <div>
                     <p>Lang</p>
                     <p className="font-iran-yekan-x">{t("title")}</p>
