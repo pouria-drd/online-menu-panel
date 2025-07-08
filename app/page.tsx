@@ -6,7 +6,7 @@ import {
     LanguageSwitcher,
     ThemeSwitch,
     ThemeToggle,
-} from "@/components/shared/settings";
+} from "@/components/common";
 
 function RootPage() {
     const t = useTranslations("RootPage");

@@ -38,7 +38,10 @@ const LanguageSwitcher = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size={"sm"}>
+                <Button
+                    variant="outline"
+                    size={"sm"}
+                    className="cursor-pointer">
                     <FaLanguage />
                     {LANGUAGES.find((l) => l.code === selectedLocale)?.label}
                 </Button>
@@ -54,6 +57,7 @@ const LanguageSwitcher = () => {
                     onValueChange={handleLocaleChange}>
                     {LANGUAGES.map((lang) => (
                         <DropdownMenuRadioItem
+                            className="cursor-pointer"
                             key={lang.code}
                             value={lang.code}>
                             {lang.label}
