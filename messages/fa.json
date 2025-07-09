@@ -1,7 +1,10 @@
 {
-    "RootPage": {
-        "title": "سلام دنیا!",
-        "about": "برو به صفحه درباره بازی"
+    "Pages": {
+        "NotFoundPage": {
+            "title": "خطا",
+            "description": "صفحه‌ای که دنبال آن هستید یافت نشد!",
+            "button": "بازگشت به صفحه اصلی"
+        }
     },
 
     "Components": {

@@ -1,7 +1,10 @@
 {
-    "RootPage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+    "Pages": {
+        "NotFoundPage": {
+            "title": "Error",
+            "description": "We can’t seem to find the page you are looking for!",
+            "button": "Back to Home Page"
+        }
     },
 
     "Components": {

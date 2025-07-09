@@ -2,13 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui";
 import { GridShape } from "@/components/common";
+import { getTranslations } from "next-intl/server";
 
-export default function NotFound() {
+async function NotFound() {
+    const t = await getTranslations("Pages.NotFoundPage");
+
     return (
         <div className="relative flex flex-col items-center justify-center min-h-screen p-6 overflow-hidden z-1">
             <GridShape />
             <div className="mx-auto w-full max-w-[242px] text-center sm:max-w-[472px]">
-                <h1 className="mb-8 font-bold text-4xl sm:text-6xl">ERROR</h1>
+                <h1 className="mb-8 font-bold text-4xl sm:text-6xl">
+                    {t("title")}
+                </h1>
 
                 <Image
                     alt="404"
@@ -26,11 +31,11 @@ export default function NotFound() {
                 />
 
                 <p className="mt-10 mb-6 text-base  sm:text-lg">
-                    We can’t seem to find the page you are looking for!
+                    {t("description")}
                 </p>
                 <Link href="/">
                     <Button size={"lg"} variant={"outline"}>
-                        Back to Home Page
+                        {t("button")}
                     </Button>
                 </Link>
             </div>
@@ -41,3 +46,5 @@ export default function NotFound() {
         </div>
     );
 }
+
+export default NotFound;

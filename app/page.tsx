@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui";
-import { useTranslations } from "next-intl";
 import {
     LanguageSwitcher,
     ThemeSwitch,
@@ -9,8 +8,6 @@ import {
 } from "@/components/common";
 
 function RootPage() {
-    const t = useTranslations("RootPage");
-
     return (
         <div
             className="min-h-dvh flex items-center justify-center 
@@ -32,11 +29,6 @@ function RootPage() {
                 <ThemeToggle />
 
                 <ThemeSwitch />
-
-                <div>
-                    <p>Lang</p>
-                    <p className="font-iran-yekan-x">{t("title")}</p>
-                </div>
 
                 <LanguageSwitcher />
             </div>

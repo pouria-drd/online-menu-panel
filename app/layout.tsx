@@ -119,8 +119,15 @@ async function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
         <html lang={locale} suppressHydrationWarning dir={dir}>
             <body
-                className={`${peyda.variable} ${iranYekanX.variable} ss02
-                        ${geistSans.variable} ${geistMono.variable} antialiased`}>
+                className={`${peyda.variable} ${iranYekanX.variable}
+                        ${geistSans.variable} ${geistMono.variable} antialiased
+                    
+                        ${
+                            locale === "fa"
+                                ? "!font-iran-yekan-x ss02"
+                                : "!font-sans"
+                        }
+                        `}>
                 <NextIntlClientProvider locale={locale}>
                     <ThemeProvider attribute="class" defaultTheme="system">
                         {children}

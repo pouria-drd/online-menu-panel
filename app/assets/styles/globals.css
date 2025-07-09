@@ -8,10 +8,10 @@
     --font-iran-yekan-x: var(--font-iran-yekan-x);
 }
 
-body {
+/* body {
     font-family: var(--font-sans), var(--font-iran-yekan-x), Arial, Helvetica,
         sans-serif;
-}
+} */
 
 .r2l {
     direction: rtl;
