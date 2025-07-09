@@ -15,5 +15,45 @@
         "ThemeSwitch": {
             "text": "Dark Mode"
         }
+    },
+
+    "Forms": {
+        "Signup": {
+            "title": "Create your account",
+            "description": "Enter your information to create your account!",
+            "steps": {
+                "1": "Name",
+                "2": "Email",
+                "3": "Confirm Email",
+                "4": "Phone",
+                "5": "Confirm Phone",
+                "6": "Account"
+            },
+            "fields": {
+                "firstName": "First Name",
+                "lastName": "Last Name",
+                "email": "Email",
+                "phone": "Phone Number",
+                "username": "Username",
+                "password": "Password",
+                "confirmPassword": "Confirm Password",
+                "code": "Confirmation Code"
+            },
+            "buttons": {
+                "next": "Next",
+                "back": "Back",
+                "submit": "Submit"
+            },
+            "errors": {
+                "firstName": "First name must be at least 2 characters",
+                "lastName": "Last name must be at least 2 characters",
+                "email": "Please enter a valid email",
+                "code": "Code is not valid",
+                "phone": "Phone number is not valid",
+                "username": "Username must be at least 3 characters, only letters, numbers and underscores",
+                "password": "Password must be at least 6 characters",
+                "confirmPassword": "Passwords must match"
+            }
+        }
     }
 }
