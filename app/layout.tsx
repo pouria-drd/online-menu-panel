@@ -120,8 +120,7 @@ async function RootLayout({ children }: Readonly<RootLayoutProps>) {
         <html lang={locale} suppressHydrationWarning dir={dir}>
             <body
                 className={`${peyda.variable} ${iranYekanX.variable} ss02
-                        ${geistSans.variable} ${geistMono.variable} 
-                        bg-white dark:bg-zinc-900  antialiased`}>
+                        ${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <NextIntlClientProvider locale={locale}>
                     <ThemeProvider attribute="class" defaultTheme="system">
                         {children}
